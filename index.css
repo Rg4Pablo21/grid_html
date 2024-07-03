@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "left header right"
+        "left content right"
+        "footer footer footer";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    gap: 1rem;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    background-color: #4CAF50;
+    padding: 1rem;
+    color: white;
+}
+
+.header-block {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    margin: 10px; 
+    border: 2px solid #388E3C; 
+    border-radius: 5px; 
+    background-color: #66BB6A; 
+    color: white; 
+}
+
+.left {
+    grid-area: left;
+    background-color: #4CAF50;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+.right {
+    grid-area: right;
+    background-color: #4CAF50;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(2, 2fr);
+    gap: 1rem;
+}
+
+.bloque {
+    background-color: #FFA500;
+    padding: 20rem;
+    text-align: center;
+    color: white;
+}
+
+#bloque1, #bloque2, #bloque3, #bloque4, #bloque5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9rem;
+    
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    background-color: #666666;
+    padding: 1rem;
+    color: white;
+}
+
+.footer-block {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    margin: 10px; /* Esto agrega espacio alrededor de cada bloque */
+    border: 2px solid #888; /* Esto agrega un borde alrededor del bloque */
+    border-radius: 5px; /* Esto hace que las esquinas sean redondeadas */
+    background-color: #888; 
+    color: white; 
+}
